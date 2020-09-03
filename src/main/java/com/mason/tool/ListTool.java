@@ -196,7 +196,7 @@ public class ListTool {
     }
 
     /**
-     * 单链表翻转
+     * 单向链表翻转
      *
      * @param head 头节点
      * @return 翻转后的头节点
@@ -211,5 +211,24 @@ public class ListTool {
             curr = next;
         }
         return pre;
+    }
+
+    /**
+     * 双向链表翻转
+     * 所谓的翻转双向链表
+     * 其实就是取尾节点
+     * 但是此时尾节点并不能当做头节点来用
+     * 因为它的next为null
+     * 这个方法是不对的
+     *
+     * @param head 头节点
+     * @return 翻转后的头节点
+     */
+    public static TwoWayListNode reverseList(TwoWayListNode head) {
+        TwoWayListNode curr = head;
+        while (curr.next != null) {
+            curr = curr.next;
+        }
+        return curr;
     }
 }

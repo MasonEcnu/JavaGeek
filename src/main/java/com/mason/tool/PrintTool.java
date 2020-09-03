@@ -30,4 +30,15 @@ public class PrintTool {
         sb.append("null]");
         System.out.println(sb.toString());
     }
+
+    public static void printFromTail(TwoWayListNode head) {
+        TwoWayListNode curr = head;
+        StringBuilder sb = new StringBuilder("TwoWayList[");
+        while (curr != null) {
+            sb.append(curr.val).append(" <--> ");
+            curr = curr.pre;
+        }
+        sb.append("null]");
+        System.out.println(sb.toString());
+    }
 }

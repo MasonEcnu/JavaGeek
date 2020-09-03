@@ -15,5 +15,7 @@ public class TestStructPrintTool {
 
         TwoWayListNode twoWayHead = ListTool.buildTwoWayList(n, 10);
         PrintTool.print(twoWayHead);
+        TwoWayListNode reverseHead = ListTool.reverseList(twoWayHead);
+        PrintTool.printFromTail(reverseHead);
     }
 }
